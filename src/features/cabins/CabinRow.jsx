@@ -92,10 +92,14 @@ const CabinRow = ({ cabin }) => {
                 Duplicate
               </Menus.Button>
               <Modal.Open opens="edit-cabin">
-                <Menus.Button icon={<HiPencil />}>Edit</Menus.Button>
+                <Menus.Button icon={<HiPencil />} disabled={isCreating}>
+                  Edit
+                </Menus.Button>
               </Modal.Open>
               <Modal.Open opens="delete-cabin">
-                <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
+                <Menus.Button icon={<HiTrash />} disabled={isDeleting}>
+                  Delete
+                </Menus.Button>
               </Modal.Open>
             </Menus.List>
 
